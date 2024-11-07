@@ -47,3 +47,78 @@ A web application that shares course-related updates via a Telegram bot. Adminis
    ```bash
    git clone https://github.com/KIPROTICHBETT53/Telegram-bot.git
    cd Telegram-bot
+
+1.  **Set up the virtual environment**:
+
+    bash
+
+    Copy code
+
+    `python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate``
+
+2.  **Install dependencies**:
+
+    bash
+
+    Copy code
+
+    `pip install -r requirements.txt`
+
+3.  **Configure MySQL Database**:
+
+    -   Ensure MySQL is running.
+    -   Create a database named `sagebot`.
+    -   Update the `app.config` details in `app.py` with your MySQL credentials.
+4.  **Configure Telegram Bot**:
+
+    -   Replace the bot token and chat ID with your Telegram bot token and target chat/group ID in the `post()` function.
+5.  **Run the application**:
+
+    bash
+
+    Copy code
+
+    `python app.py`
+
+6.  **Access the application**: Open your browser and go to `http://127.0.0.1:5000`.
+
+* * * * *
+
+🤝 Contribution Guidelines
+--------------------------
+
+Contributions are welcome! Please fork this repository and submit a pull request.
+
+1.  Fork the repo.
+2.  Create a new branch (`git checkout -b feature-branch`).
+3.  Commit your changes (`git commit -am 'Add new feature'`).
+4.  Push to the branch (`git push origin feature-branch`).
+5.  Create a new Pull Request.
+
+* * * * *
+
+🛠️ Technologies Used
+---------------------
+
+-   **Python** (3.8+)
+-   **Flask** - Web framework
+-   **MySQL** - Database
+-   **Telegram Bot API** - Messaging
+-   **HTML/CSS** - Frontend
+
+* * * * *
+
+📜 License
+----------
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+* * * * *
+
+📞 Support
+----------
+
+For any questions or support, please contact:
+
+-   **Elly Bett** - [LinkedIn](www.linkedin.com/in/elly-bett-5b2535247)
