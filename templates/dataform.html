@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sagebot| Admin Data Entry Fom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dataform.css') }}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Sage-Bot Data Entry Form</div>
+    <div class="content">
+      <form action="{{ url_for('post') }}" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Unit Code:</span>
+            <input type="text" placeholder="Unit Code." name="unit" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Instructor:</span>
+            <input type="text" placeholder="Name of The Instructor" name="instructor" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Subject:</span>
+            <input type="text" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Information:</span>
+            <textarea name="information" placeholder="Type your Information here" cols="" rows="5"></textarea>
+          </div>
+          <div class="input-box">
+            <span class="details">Date:</span>
+            <input type="date" name="date" >
+          </div>
+          <div class="input-box">
+            <span class="details">Time:</span>
+            <input type="time" name="time">
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Post Infomation" onclick="alert('Confirm Deletion of Delivered Messages!');">
+        </div>
+        <a href="{{ url_for('home') }}" class="homebtn">Home</a>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

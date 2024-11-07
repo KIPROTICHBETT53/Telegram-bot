@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>SAGE-BOT DASHBOARD</h1>
+                <a href="{{ url_for('userhome') }}"><i class="fas fa-home"></i>Home</a>
+				<a href="{{ url_for('userprofile') }}"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="{{ url_for('submit') }}">Create Post</a>
+				<!--<a href=""><i class="fas fa-user-circle"></i>Check Posts</a>-->
+				<!--<a href="#"><i class="fas fa-user-circle"></i>Users</a>-->
+				<a href="{{ url_for('userlogout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>

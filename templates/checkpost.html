@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sagebot | News Desk</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>SAGE-BOT DASHBOARD</h1>
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+				<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="{{ url_for('post') }}"><i class="fas fa-user-circle"></i>Create Post</a>
+				<a href="#"><i class="fas fa-user-circle"></i>Check Posts</a>
+				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+    <div class="content">
+		<div style="padding: 20px; margin-bottom: 0;" id="send"><a onclick="alert('Confirm Delivery of Message(s)!');" href="{{ url_for('send') }}">Send</a>
+		<a onclick="alert('Confirm Deletion of Delivered Messages!');" href="{{ url_for('delete') }}">Delete</a></div>
+			<h2>Sage Elementary Updates</h2>
+<form method="POST" action="{{ url_for('check') }}">
+<table id="customers">
+    <tr>
+        <th>News_ID</th>
+        <th>Unit_Code</th>
+        <th>Instructor</th>
+        <th>Subject</th>
+        <th>Information</th>
+		<th>Date</th>
+		<th>Time</th>
+    </tr>
+
+	{% for row in data %}
+    <tr id="mytr">
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+		<td>{{ row[5] }}</td>
+		<td>{{ row[6] }}</td>
+    </tr>
+	{% endfor %}
+</table>
+</form>
+		</div>
+
+	</body>
+</html>

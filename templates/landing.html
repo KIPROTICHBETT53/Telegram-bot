@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landing.css') }}">
+    <title>SageBot | LandingPage</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <nav class="navbar">
+                <h1>Sage-bot</h1>
+            </nav>
+            <div class="content">
+                <h1>Academic Telegram Bot</h1>
+                <!--<p><i>-#real time updates-</i></p>-->
+                <a href="{{ url_for('login') }}">Login as Adminstrator</a>
+                <a href="{{ url_for('userlogin') }}">Login as Instructor</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
