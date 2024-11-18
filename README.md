@@ -49,19 +49,14 @@ A web application that shares course-related updates via a Telegram bot. Adminis
    cd Telegram-bot
 
 1.  **Set up the virtual environment**:
-
-    bash
-
-    Copy code
-
+    ```bash
     `python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate``
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate```
 
 2.  **Install dependencies**:
 
     bash
 
-    Copy code
 
     `pip install -r requirements.txt`
 
@@ -76,8 +71,6 @@ A web application that shares course-related updates via a Telegram bot. Adminis
 5.  **Run the application**:
 
     bash
-
-    Copy code
 
     `python app.py`
 
